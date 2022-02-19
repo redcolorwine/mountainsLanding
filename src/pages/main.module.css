@@ -1,0 +1,144 @@
+.main {
+    /* height: 100%; */
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+.head h1 {
+    font-size: 110pt;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 20px;
+    color: white;
+    font-family: consolas;
+}
+
+.head p {
+    padding: 0;
+    margin: 0;
+    font-size: 50pt;
+    letter-spacing: 15px;
+    font-family: 'sans';
+    color: blanchedalmond;
+}
+
+
+.information {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.information h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 40pt;
+}
+
+.information p {
+    font-size: 14pt;
+    padding: 0;
+    margin: 0;
+}
+
+.firstBlock {
+    display: flex;
+    background-color: black;
+    color: blanchedalmond;
+    padding: 0;
+    margin: 0;
+
+}
+
+.secondBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    /* background-image: url('../media/natumountains.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+}
+
+.secondBlock img {
+
+    margin-right: 20px;
+
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 700px;
+    height: auto;
+}
+
+.thirthBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14pt;
+    padding: 0;
+    margin: 0;
+}
+.otherMountains {
+    display: flex;
+    font-size: 10pt;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.otherMountains img{
+    height: 400px;
+    width: 500px;
+}
+.first {
+    width: 50vw;
+    border-right: 2px solid gray;
+}
+
+.second {
+    width: 50vw;
+}
+
+.animateBlock {
+    animation-duration: 3s;
+    animation-name: animate-block;
+}
+
+@keyframes animate-block {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes move {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 50vw;
+    }
+}
+
+.moveblock {
+    animation-direction: normal;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-name: move;
+    animation-timing-function: linear;
+}
