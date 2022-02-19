@@ -114,7 +114,14 @@
     animation-duration: 3s;
     animation-name: animate-block;
 }
-
+.animateBlockFourSec {
+    animation-duration: 4s;
+    animation-name: animate-block;
+}
+.animateBlockFiveSec {
+    animation-duration: 5s;
+    animation-name: animate-block;
+}
 @keyframes animate-block {
     0% {
         opacity: 0;

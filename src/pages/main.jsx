@@ -13,6 +13,10 @@ const Main = (props) => {
     const { ref: thirthRef, inView: thirthIsVisible } = useInView();
     const { ref: fourthRef, inView: fourthIsVisible } = useInView();
     const { ref: fiveRef, inView: fiveIsVisible } = useInView();
+    const { ref: sixRef, inView: sixIsVisible } = useInView();
+    const { ref: sevenRef, inView: sevenIsVisible } = useInView();
+    const { ref: eightRef, inView: eightIsVisible } = useInView();
+    const { ref: nineRef, inView: nineIsVisible } = useInView();
     return (
         <div className={cmedia.main}>
             <div className={cmedia.head}>
@@ -69,7 +73,7 @@ const Main = (props) => {
 
                 </div>
                 <div className={cmedia.fourthBlock}>
-                    <div className={cmedia.volcanoes}>
+                    <div className={`${cmedia.volcanoes} ${sixIsVisible ? cmedia.animateBlock : ' '}`} ref={sixRef}>
                         <h1>Volcanoes</h1>
                         <p>Volcanoes are formed when a plate is pushed below another plate,
                             or at a mid-ocean ridge or hotspot.
@@ -81,7 +85,7 @@ const Main = (props) => {
                         <img src={volcanoes} alt="" />
                     </div>
                     <div className={cmedia.otherMountains}>
-                        <div className={cmedia.foldmountains}>
+                        <div className={`${cmedia.foldmountains} ${sevenIsVisible ? cmedia.animateBlock : ' '}`} ref={sevenRef}>
                             <h4>Fold mountains</h4>
                             <p>Fold mountains occur when two plates collide: shortening occurs along thrust faults and the crust is
                                 overthickened.Since the less dense continental crust "floats" on the denser
@@ -92,7 +96,7 @@ const Main = (props) => {
                                 may also be recumbent and overturned folds. The Balkan Mountains and the Jura Mountains are examples of fold mountains.</p>
                             <img src={fold} alt="" />
                         </div>
-                        <div className={cmedia.blockmountains}>
+                        <div className={`${cmedia.blockmountains} ${eightIsVisible ? cmedia.animateBlockFourSec : ' '}`} ref={eightRef} >
                             <h4>Block mountains</h4>
                             <p>Block mountains are caused by faults in the crust: a plane where rocks
                                 have moved past each other. When rocks on one side of a fault rise relative to the other,
@@ -103,7 +107,7 @@ const Main = (props) => {
                                 stress is extensional and the crust is thinned.</p>
                             <img src={blockmountain} alt="" />
                         </div>
-                        <div className={cmedia.eroison}>
+                        <div className={`${cmedia.erosion} ${nineIsVisible ? cmedia.animateBlockFiveSec : ' '}`} ref={nineRef}>
                             <h4>Erosion</h4>
                             <p>During and following uplift, mountains are subjected to the agents of erosion
                                 (water, wind, ice, and gravity) which gradually wear the uplifted area down.
